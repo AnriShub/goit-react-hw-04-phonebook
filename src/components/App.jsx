@@ -40,7 +40,8 @@ export const App = () => {
   }
 
   const deleteContact = e => {
-    setContacts(contacts.filter(contact => contact.id !== e));
+    setContacts(prevState =>
+      prevState.filter(contact => contact.id !== e));
   }
 
   const getVisibleContacts = () => {
